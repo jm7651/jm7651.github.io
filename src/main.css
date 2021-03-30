@@ -1,0 +1,481 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+:root {
+  /* color */
+  --color-bg-white: #ffffff;
+  --color-black: #333333;
+  --color-red-color: #ff4200;
+  --color-green-color: #4eac62;
+  --color-bg-gray: #efefef;
+  /* font size */
+
+  /* font weight */
+}
+
+/* universal tags */
+* {
+  box-sizing: border-box;
+}
+/* typography */
+html,
+body {
+  max-width: 100%;
+  height: 100%;
+  font-size: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  overflow-x: hidden;
+}
+/* layout */
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 120rem;
+  margin: 0 auto;
+}
+/* navbar */
+nav {
+  position: fixed;
+  background: transparent;
+  width: 100%;
+  top: 0;
+  font-weight: 900;
+  color: var(--color-black);
+  font-family: "Rokkitt", serif;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+.navbar.active {
+  position: fixed;
+  background: #333;
+  z-index: 100;
+}
+
+/* .navbar.navbar--dark {
+  background: var(--color-bg-white);
+}
+.navbar.navbar--dark img:nth-child(1) {
+  transition: all 1s ease;
+  opacity: 0;
+}
+.navbar.navbar--dark img:nth-child(2) {
+  transition: all 1s ease;
+  opacity: 1;
+} */
+/* .navbar__logo {
+  position: relative;
+  top: -3rem;
+}
+.navbar__logo img {
+  transition: all 1s ease;
+  width: 10rem;
+  position: absolute;
+  top: 0;
+}
+.navbar__logo img:nth-child(2) {
+  opacity: 0;
+} */
+.navbar__menu {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.navbar__menu__item {
+  position: relative;
+  padding: 0.8rem 1.2rem;
+  margin: 0 0.8rem;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  list-style: none;
+  color: #fff;
+}
+.navbar__menu__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  margin-top: 4px;
+  transition: all 500ms ease-out;
+}
+.navbar__menu__item:hover {
+  color: var(--color-red-color);
+}
+.navbar__menu__item > .active {
+  color: var(--color-red-color);
+}
+.navbar__menu__item > .active::after,
+.navbar__menu__item:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  margin-top: 4px;
+  background: var(--color-red-color);
+}
+.navbar__toggle {
+  display: none;
+}
+/* .titlename {
+  position: relative;
+  margin-top: 10rem;
+  font-size: 15vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  background: -webkit-linear-gradient(#f07502, rgb(255, 53, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 10;
+} */
+/* .titlename {
+  padding: 5rem;
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  will-change: transform;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+.maintext {
+  position: absolute;
+  font-size: 15vw;
+  color: #fff;
+  line-height: 15vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  padding: 20px 0;
+  mix-blend-mode: screen;
+  transform-style: preserve-3d;
+  transform: rotate(0.03deg);
+  filter: blur(1px);
+} */
+/* .titlename .maintext:nth-child(1) {
+  -webkit-clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
+  clip-path: polygon(-30% 0, -20% 0, 20% 100%, 0% 100%);
+  -webkit-animation: wave 2000ms -10000ms ease-in-out infinite alternate;
+  animation: wave 2000ms -10000ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(2) {
+  -webkit-clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
+  clip-path: polygon(-25% 0, -15% 0, 25% 100%, 5% 100%);
+  -webkit-animation: wave 2000ms -9800ms ease-in-out infinite alternate;
+  animation: wave 2000ms -9800ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(3) {
+  -webkit-clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
+  clip-path: polygon(-20% 0, -10% 0, 30% 100%, 10% 100%);
+  -webkit-animation: wave 2000ms -9600ms ease-in-out infinite alternate;
+  animation: wave 2000ms -9600ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(4) {
+  -webkit-clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
+  clip-path: polygon(-15% 0, -5% 0, 35% 100%, 15% 100%);
+  -webkit-animation: wave 2000ms -9400ms ease-in-out infinite alternate;
+  animation: wave 2000ms -9400ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(5) {
+  -webkit-clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
+  clip-path: polygon(-10% 0, 0% 0, 40% 100%, 20% 100%);
+  -webkit-animation: wave 2000ms -9200ms ease-in-out infinite alternate;
+  animation: wave 2000ms -9200ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(6) {
+  -webkit-clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
+  clip-path: polygon(-5% 0, 5% 0, 45% 100%, 25% 100%);
+  -webkit-animation: wave 2000ms -9000ms ease-in-out infinite alternate;
+  animation: wave 2000ms -9000ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(7) {
+  -webkit-clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
+  clip-path: polygon(0% 0, 10% 0, 50% 100%, 30% 100%);
+  -webkit-animation: wave 2000ms -8800ms ease-in-out infinite alternate;
+  animation: wave 2000ms -8800ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(8) {
+  -webkit-clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
+  clip-path: polygon(5% 0, 15% 0, 55% 100%, 35% 100%);
+  -webkit-animation: wave 2000ms -8600ms ease-in-out infinite alternate;
+  animation: wave 2000ms -8600ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(9) {
+  -webkit-clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
+  clip-path: polygon(10% 0, 20% 0, 60% 100%, 40% 100%);
+  -webkit-animation: wave 2000ms -8400ms ease-in-out infinite alternate;
+  animation: wave 2000ms -8400ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(10) {
+  -webkit-clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
+  clip-path: polygon(15% 0, 25% 0, 65% 100%, 45% 100%);
+  -webkit-animation: wave 2000ms -8200ms ease-in-out infinite alternate;
+  animation: wave 2000ms -8200ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(11) {
+  -webkit-clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
+  clip-path: polygon(20% 0, 30% 0, 70% 100%, 50% 100%);
+  -webkit-animation: wave 2000ms -8000ms ease-in-out infinite alternate;
+  animation: wave 2000ms -8000ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(12) {
+  -webkit-clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
+  clip-path: polygon(25% 0, 35% 0, 75% 100%, 55% 100%);
+  -webkit-animation: wave 2000ms -7800ms ease-in-out infinite alternate;
+  animation: wave 2000ms -7800ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(13) {
+  -webkit-clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
+  clip-path: polygon(30% 0, 40% 0, 80% 100%, 60% 100%);
+  -webkit-animation: wave 2000ms -7600ms ease-in-out infinite alternate;
+  animation: wave 2000ms -7600ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(14) {
+  -webkit-clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
+  clip-path: polygon(35% 0, 45% 0, 85% 100%, 65% 100%);
+  -webkit-animation: wave 2000ms -7400ms ease-in-out infinite alternate;
+  animation: wave 2000ms -7400ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(15) {
+  -webkit-clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
+  clip-path: polygon(40% 0, 50% 0, 90% 100%, 70% 100%);
+  -webkit-animation: wave 2000ms -7200ms ease-in-out infinite alternate;
+  animation: wave 2000ms -7200ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(16) {
+  -webkit-clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
+  clip-path: polygon(45% 0, 55% 0, 95% 100%, 75% 100%);
+  -webkit-animation: wave 2000ms -7000ms ease-in-out infinite alternate;
+  animation: wave 2000ms -7000ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(17) {
+  -webkit-clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
+  clip-path: polygon(50% 0, 60% 0, 100% 100%, 80% 100%);
+  -webkit-animation: wave 2000ms -6800ms ease-in-out infinite alternate;
+  animation: wave 2000ms -6800ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(18) {
+  -webkit-clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
+  clip-path: polygon(55% 0, 65% 0, 105% 100%, 85% 100%);
+  -webkit-animation: wave 2000ms -6600ms ease-in-out infinite alternate;
+  animation: wave 2000ms -6600ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(19) {
+  -webkit-clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
+  clip-path: polygon(60% 0, 70% 0, 110% 100%, 90% 100%);
+  -webkit-animation: wave 2000ms -6400ms ease-in-out infinite alternate;
+  animation: wave 2000ms -6400ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(20) {
+  -webkit-clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
+  clip-path: polygon(65% 0, 75% 0, 115% 100%, 95% 100%);
+  -webkit-animation: wave 2000ms -6200ms ease-in-out infinite alternate;
+  animation: wave 2000ms -6200ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(21) {
+  -webkit-clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
+  clip-path: polygon(70% 0, 80% 0, 120% 100%, 100% 100%);
+  -webkit-animation: wave 2000ms -6000ms ease-in-out infinite alternate;
+  animation: wave 2000ms -6000ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(22) {
+  -webkit-clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
+  clip-path: polygon(75% 0, 85% 0, 125% 100%, 105% 100%);
+  -webkit-animation: wave 2000ms -5800ms ease-in-out infinite alternate;
+  animation: wave 2000ms -5800ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(23) {
+  -webkit-clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
+  clip-path: polygon(80% 0, 90% 0, 130% 100%, 110% 100%);
+  -webkit-animation: wave 2000ms -5600ms ease-in-out infinite alternate;
+  animation: wave 2000ms -5600ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(24) {
+  -webkit-clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
+  clip-path: polygon(85% 0, 95% 0, 135% 100%, 115% 100%);
+  -webkit-animation: wave 2000ms -5400ms ease-in-out infinite alternate;
+  animation: wave 2000ms -5400ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(25) {
+  -webkit-clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
+  clip-path: polygon(90% 0, 100% 0, 140% 100%, 120% 100%);
+  -webkit-animation: wave 2000ms -5200ms ease-in-out infinite alternate;
+  animation: wave 2000ms -5200ms ease-in-out infinite alternate;
+}
+.titlename .maintext:nth-child(26) {
+  -webkit-clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
+  clip-path: polygon(95% 0, 105% 0, 145% 100%, 125% 100%);
+  -webkit-animation: wave 2000ms -5000ms ease-in-out infinite alternate;
+  animation: wave 2000ms -5000ms ease-in-out infinite alternate;
+} */
+
+/* @-webkit-keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95) rotateX(5deg) rotateY(5deg)
+      rotateZ(0deg);
+    color: #003c97;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotateX(0deg) rotateY(0deg)
+      rotateZ(0deg);
+    color: #008bc2;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95) rotateX(5deg) rotateY(5deg)
+      rotateZ(0deg);
+    color: #003c97;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotateX(0deg) rotateY(0deg)
+      rotateZ(0deg);
+    color: #008bc2;
+  }
+} */
+/* work */
+.work__projects {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  display: block;
+}
+
+.work__projects.active {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
+}
+.project {
+  position: relative;
+  width: 30rem;
+  margin: 0.2rem;
+  list-style: none;
+}
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+/* .waterwave {
+  position: absolute;
+  top: 30rem;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0.8;
+}
+.watershape {
+  background: linear-gradient(45deg, #9cffe3 0%, #0084ff 100%);
+  animation: morph 8s ease-in-out infinite;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  height: 500px;
+  transition: all 1s ease-in-out;
+  width: 500px;
+  z-index: 5;
+  filter: blur(1px);
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background: linear-gradient(45deg, #9cffe3 0%, #0084ff 100%);
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+} */
+#resume {
+  padding-top: 50rem;
+}
+/* .water-damage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+  transform-style: preserve-3d;
+  z-index: 100;
+}
+.water-drop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 0;
+  height: 0;
+  border: 10px solid #88d5bf;
+  border-radius: 1000px;
+  margin-top: -10px;
+  margin-left: -10px;
+  opacity: 0;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  transform: translate(0, -100px) scale(1, 1);
+  animation: water-drop 3000ms cubic-bezier(0.56, 0.18, 0.92, 0.69) infinite;
+}
+.water-drop::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7.5px 13px 7.5px;
+  border-color: transparent transparent #88d5bf transparent;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translate(-50%, 0);
+}
+@keyframes water-drop {
+  0% {
+    opacity: 0;
+    z-index: 10;
+    transform: translate(0, -100px) scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    z-index: 10;
+    transform: translate(0, 0) scale(0.8, 1.2);
+  }
+  51% {
+    opacity: 1;
+    z-index: 10;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-width: 10px;
+    transform: rotateX(70deg);
+    animation-timing-function: cubic-bezier(0.12, 0.41, 0.63, 0.99);
+  }
+  100% {
+    opacity: 0;
+    z-index: 1;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-width: 200px;
+    transform: rotateX(70deg);
+    animation-timing-function: cubic-bezier(0.12, 0.41, 0.63, 0.99);
+  }
+} */

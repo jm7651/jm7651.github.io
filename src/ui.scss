@@ -1,0 +1,434 @@
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.xbutton {
+  button {
+    font-size: 20rem;
+    padding: 2rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    border: none;
+    border-radius: 0;
+    img {
+      width: 100%;
+    }
+  }
+  position: fixed;
+  top: 0;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  word-break: keep-all;
+}
+.main001 {
+  .inner {
+    justify-content: center;
+  }
+}
+.main001 .text {
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #180900;
+  margin-right: 5rem;
+  line-height: 1.2;
+}
+.main001 .text span {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.made {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 5px;
+  padding-top: 5rem;
+}
+.agripa001_bg,
+.agripa003 {
+  background: #4fad63;
+}
+.agripa002 {
+  width: 100%;
+  background: #c7d9e7;
+}
+.agripa004 {
+  width: 100%;
+  padding: 40rem 0;
+  background: url(components/project/ui/img/agripa004.jpg);
+  background-size: cover;
+}
+.main001 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 5rem;
+}
+// ui1
+.pandac001_bg {
+  background: #008072;
+}
+.maximg {
+  max-width: 100%;
+  img {
+    max-width: 100%;
+  }
+}
+.pandac001_bg .text,
+.pandac001_bg .made {
+  color: #fff;
+}
+// 옐로먼트
+.yelloment_bg {
+  background: #ffc600;
+}
+.yelloment001 {
+  width: 100%;
+  background: #fff;
+}
+.yelloment002 {
+  width: 100%;
+  background: #ffc600;
+}
+.yelloment001 img,
+.yelloment002 img {
+  max-width: 100%;
+}
+// hems
+.hems_bg {
+  background: #158fe5;
+}
+.hems002 {
+  background: #f8f9fb;
+}
+.movie {
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    min-width: 80rem;
+    min-height: 40rem;
+  }
+}
+//태양광
+/* 태양광 */
+.solar01_bg {
+  background: #f75e00;
+}
+
+.solar01_bg .made {
+  color: #381500;
+}
+.solar02_p {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: url(./components/project/ui/img/solar_bg02.jpg);
+  background-size: 100% 100%;
+  z-index: -1;
+  padding: 30rem 0;
+}
+.solar02_p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.7;
+}
+.solar02_p .inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.solar02_p .inner > div:nth-child(1) {
+  position: relative;
+  z-index: 6;
+}
+.solar02_p .inner > div:nth-child(2) {
+  position: relative;
+  margin-top: 2rem;
+  font-size: 4rem;
+  font-weight: 700;
+  z-index: 7;
+}
+.solar02_p .inner > div:nth-child(3) {
+  position: relative;
+  margin-top: 2rem;
+  font-size: 2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  z-index: 8;
+}
+.solar03_p {
+  display: flex;
+  padding: 10rem 0;
+  width: 100%;
+  background: #1684cf;
+  justify-content: center;
+  align-items: center;
+}
+.solar03_p .inner {
+  display: flex;
+  flex-direction: column;
+}
+.solar03 {
+  width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.circle_p {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: 200px;
+  color: #1684cf;
+  background: #fff;
+  position: relative;
+}
+.solar03_p > .inner > div:nth-child(2) {
+  padding-top: 5rem;
+}
+.solar04_p {
+  background: #f0f2f0;
+}
+.solar05_p {
+  background: #3c1700;
+}
+// Bems
+.bems001 {
+  background: #fff671;
+}
+.bems002 {
+  background: #dde5f2;
+  padding: 5rem;
+}
+.bems003 img {
+  width: 30%;
+}
+.bems005 {
+  background: #ee9036;
+}
+.bems006 {
+  background: #eeeff3;
+}
+.bems007 {
+  background: #e7ebee;
+}
+// 케빈랩
+.kevin001_bg {
+  background: #f7ac1d;
+}
+// hems_pc
+.hemspc_bg {
+  background: #e9ddf7;
+}
+// 세종페이
+.sejong_bg {
+  background: #ec232b;
+}
+// xi
+.xi_bg {
+  background: #006d9e;
+}
+.green01 {
+  background: #c0edea;
+}
+// 벤츠
+.benz {
+  background: #000;
+}
+// 플렉스
+.flex_row_m_column {
+  display: flex;
+}
+.flex_row_m_column_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media screen and (max-width: 450px) {
+  .xbutton button {
+    right: 2rem;
+    font-size: 6rem;
+    padding: 2rem;
+    width: 25vw;
+    height: 25vw;
+  }
+  .main001 {
+    box-sizing: border-box;
+    padding: 10rem 1rem 1rem 1rem;
+    width: 100%;
+    overflow-x: hidden;
+    .inner {
+      width: 100%;
+      padding: 2rem;
+      flex-direction: column;
+      > div:nth-child(2) {
+        img {
+          width: 65%;
+        }
+      }
+      .text {
+        margin-right: 0;
+        padding-bottom: 2rem;
+        font-size: 2rem;
+        span {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .agripa002 {
+    img {
+      width: 100%;
+    }
+  }
+  .agripa003 {
+    img {
+      width: 100%;
+    }
+  }
+  .agripa004 {
+    width: 100%;
+    padding: 4rem 2rem;
+    img {
+      width: 100%;
+    }
+  }
+  .agripa005 {
+    img {
+      width: 100%;
+    }
+  }
+  .agripa006 {
+    img {
+      width: 100%;
+    }
+  }
+  .agripa007 {
+    img {
+      width: 100%;
+    }
+  }
+  .agripa008 {
+    img {
+      width: 100%;
+    }
+  }
+  .maximg {
+    img {
+      width: 100%;
+    }
+  }
+  .movie {
+    width: 100%;
+    iframe {
+      width: 100%;
+    }
+  }
+  .hems002 {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .ui_section {
+    width: 100%;
+  }
+  .solar02_p {
+    width: 100%;
+    padding: 8rem 2rem;
+    .inner {
+      width: 100%;
+      > div:nth-child(2) {
+        font-size: 2.4rem;
+      }
+      > div:nth-child(3) {
+        font-size: 1.6rem;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+  .solar03_p {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .circle {
+    width: 65px;
+    height: 65px;
+    font-size: 1rem;
+  }
+  .solar04_p img,
+  .solar05_p img {
+    width: 100%;
+  }
+  .bems002 {
+    width: 100%;
+    img {
+      width: 200%;
+    }
+  }
+  .bems003 {
+    width: 100%;
+    img {
+      width: 120%;
+    }
+  }
+  .bems004 {
+    img {
+      width: 200%;
+    }
+  }
+  .bems005,
+  .bems006 {
+    img {
+      width: 120%;
+    }
+  }
+  .bems007,
+  .bems008 {
+    img {
+      width: 100%;
+    }
+  }
+  .flex_row_m_column,
+  .flex_row_m_column_center {
+    flex-direction: column;
+  }
+}

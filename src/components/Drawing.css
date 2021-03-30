@@ -1,0 +1,58 @@
+.simple-trans-main > div {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 800;
+  font-size: 25em;
+  will-change: transform, opacity;
+  text-shadow: 0px 2px 40px #00000020, 0px 2px 5px #00000030;
+}
+.imgwrap {
+  width: 30%;
+}
+.container {
+  padding: 40px;
+  background: #419be0;
+}
+
+.slick-slide img {
+  margin: auto;
+  width: 25vw;
+}
+.slideimgdiv {
+  outline: none;
+}
+.slidetitle {
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+  border-radius: 1rem;
+  background: #4eac62;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+.slider_container {
+  width: 100vw;
+  margin-top: 4rem;
+}
+.slick-dots li.slick-active button:before {
+  color: #ff4200 !important;
+}
+@media screen and (max-width: 450px) {
+  .slideimgdiv {
+    width: 100vw;
+  }
+  .slideimgsize {
+    width: 100vw;
+    height: auto;
+  }
+  .slick-slide img {
+    width: 100vw;
+  }
+}
